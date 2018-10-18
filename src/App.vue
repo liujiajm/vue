@@ -2,7 +2,9 @@
   <div id="app">
     <mt-header fixed title="Vue项目"></mt-header>
 
-    <router-view></router-view>
+    <transition >
+        <router-view></router-view>
+    </transition>
 
     <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="home">
@@ -39,5 +41,19 @@ export default {
   text-align: center;
   color: #2c3e50; */
   margin-top: 40px;
+  overflow: hidden;
+}
+.v-enter{
+  opacity: 0;
+  transform: translateX(100%)
+}
+.v-leave-to{
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute
+}
+.v-enter-active,
+.v-leave-active{
+  transition: all .4s ease;
 }
 </style>

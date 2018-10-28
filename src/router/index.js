@@ -10,6 +10,10 @@ import newList from '@/components/tabbar/newList'
 import newInfo from '@/components/tabbar/newInfo'
 import photoList from '@/components/tabbar/photoList.vue'
 import photoInfo from '@/components/tabbar/photoInfo.vue'
+import goodList from '@/components/tabbar/goodList.vue'
+import goodsInfo from '@/components/tabbar/goodsInfo.vue'
+import GoodsDesc from '@/components/tabbar/GoodsDesc.vue'
+import GoodsComment from '@/components/tabbar/GoodsComment.vue'
 
 Vue.use(Router)
 
@@ -20,15 +24,60 @@ export default new Router({
   //   name: 'HelloWorld',
   //   component: HelloWorld
   // }]
-  routes: [
-    {path: '/home',component: HomeContainer},
-    {path: '/member',component: MemberContainer},
-    {path: '/shopCar',component: ShopCarContainer},
-    {path: '/search',component: SearchContainer},
-    {path: '/home/newList',component: newList},
-    {path: '/home/newInfo/:id',component: newInfo},
-    {path: '/home/photolist',component: photoList},
-    {path: '/home/photoInfo/:id',component: photoInfo},
-    {path: '*',redirect: '/home'}
+  routes: [{
+      path: '/home',
+      component: HomeContainer
+    },
+    {
+      path: '/member',
+      component: MemberContainer
+    },
+    {
+      path: '/shopCar',
+      component: ShopCarContainer
+    },
+    {
+      path: '/search',
+      component: SearchContainer
+    },
+    {
+      path: '/home/newList',
+      component: newList
+    },
+    {
+      path: '/home/newInfo/:id',
+      component: newInfo
+    },
+    {
+      path: '/home/photolist',
+      component: photoList
+    },
+    {
+      path: '/home/photoInfo/:id',
+      component: photoInfo
+    },
+    {
+      path: '/goods/goodList',
+      component: goodList
+    },
+    {
+      path: '/goods/goodsInfo/:id',
+      name: 'goodsInfo',
+      component: goodsInfo
+    },
+    {
+      path: '/goods/goodsdesc/:id',
+      name: 'goodsdesc',
+      component: GoodsDesc
+    },
+    {
+      path: '/goods/goodscomment/:id',
+      name: 'goodscomment',
+      component: GoodsComment
+    },
+    {
+      path: '*',
+      redirect: '/home'
+    }
   ]
 })

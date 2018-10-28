@@ -54,7 +54,7 @@ export default {
     },
     getPhotoListImg(cateId) {
       this.$http.get("api/getimages/" + cateId).then(res => {
-        console.log(cateId);
+        // console.log(cateId);
         if (res.body.status == 0) {
           this.list = res.body.message;
         }

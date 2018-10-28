@@ -5,7 +5,7 @@
   "author": "Lime <liujiajm@foxmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open --port 3000 --host 192.168.22.72",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
